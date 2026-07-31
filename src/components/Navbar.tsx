@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
           id="nav-logo-btn"
         >
           <HavenLogo className="w-5 h-5 sm:w-6 sm:h-6" />
-          <span className="font-semibold text-white text-lg">Haven</span>
+          <span className="font-semibold text-white text-lg">Rishit</span>
         </button>
 
         {/* Desktop Navigation Links */}
