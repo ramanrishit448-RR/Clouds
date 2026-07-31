@@ -42,16 +42,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
       {/* Top Floating Panel matching reference image */}
       <nav 
         id="top-floating-panel"
-        className="pointer-events-auto bg-white text-slate-900 rounded-full px-5 sm:px-7 py-2.5 sm:py-3 shadow-2xl flex items-center justify-between gap-6 sm:gap-10 max-w-4xl w-full border border-slate-100 transition-all duration-300"
+        className="pointer-events-auto bg-white/10 backdrop-blur-md text-white rounded-full px-5 sm:px-7 py-2.5 sm:py-3 shadow-2xl flex items-center justify-between gap-6 sm:gap-10 max-w-4xl w-full border border-white/20 transition-all duration-300"
       >
         {/* Logo */}
         <button 
           onClick={() => onNavClick('Home')}
-          className="flex items-center gap-2 font-bold text-lg tracking-tight text-slate-900 hover:opacity-80 transition-opacity cursor-pointer"
+          className="flex items-center gap-2 font-bold text-lg tracking-tight text-white hover:opacity-80 transition-opacity cursor-pointer"
           id="nav-logo-btn"
         >
           <HavenLogo className="w-5 h-5 sm:w-6 sm:h-6" />
-          <span className="font-semibold text-slate-900 text-lg">Haven</span>
+          <span className="font-semibold text-white text-lg">Haven</span>
         </button>
 
         {/* Desktop Navigation Links */}
@@ -63,8 +63,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
               onClick={() => onNavClick(item)}
               className={`text-sm font-medium transition-colors cursor-pointer ${
                 activeNav === item 
-                  ? 'text-slate-900 font-semibold' 
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'text-white font-semibold' 
+                  : 'text-white/70 hover:text-white'
               }`}
             >
               {item}
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
           <button
             id="nav-login-btn"
             onClick={onLoginClick}
-            className="bg-[#18181b] hover:bg-black text-white text-sm font-medium px-5 py-1.5 sm:py-2 rounded-full transition-all duration-200 hover:shadow-md cursor-pointer active:scale-95"
+            className="bg-white hover:bg-transparent text-black hover:text-white border border-white hover:border-white/20 text-sm font-medium px-5 py-1.5 sm:py-2 rounded-full transition-all duration-200 hover:shadow-md cursor-pointer active:scale-95"
           >
             Login
           </button>
@@ -86,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
           <button
             id="mobile-menu-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-slate-700 hover:text-slate-900 p-1 rounded-lg"
+            className="md:hidden text-white/80 hover:text-white p-1 rounded-lg"
             aria-label="Toggle Menu"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="pointer-events-auto absolute top-20 left-4 right-4 bg-white rounded-2xl p-4 shadow-2xl border border-slate-100 flex flex-col gap-3 md:hidden">
+        <div className="pointer-events-auto absolute top-20 left-4 right-4 bg-zinc-900/90 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-white/10 flex flex-col gap-3 md:hidden">
           {navItems.map((item) => (
             <button
               key={item}
@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onNavClick, active
                 setMobileMenuOpen(false);
               }}
               className={`text-left text-sm font-medium px-4 py-2 rounded-lg transition-colors ${
-                activeNav === item ? 'bg-slate-100 text-slate-900 font-semibold' : 'text-slate-600 hover:bg-slate-50'
+                activeNav === item ? 'bg-white/20 text-white font-semibold' : 'text-white/70 hover:bg-white/10'
               }`}
             >
               {item}

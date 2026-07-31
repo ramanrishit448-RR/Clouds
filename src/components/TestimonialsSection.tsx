@@ -95,7 +95,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   return (
     <section 
       id="testimonials-section"
-      className="w-full bg-black text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10 relative overflow-hidden"
+      className="w-full bg-transparent text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10 relative overflow-hidden"
     >
       <div className="max-w-6xl w-full mx-auto">
         

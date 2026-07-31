@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section 
       id="hero-banner"
-      className="min-h-screen w-full bg-black text-white flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative overflow-hidden"
+      className="min-h-screen w-full bg-transparent text-white flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative overflow-hidden"
     >
       {/* Subtle Transparent Ambient Gradient Spotlight */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-b from-white/[0.08] via-white/[0.02] to-transparent rounded-full blur-3xl pointer-events-none" />

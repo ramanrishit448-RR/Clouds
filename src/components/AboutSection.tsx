@@ -46,7 +46,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
   return (
     <section 
       id="about-us-section"
-      className="w-full bg-black text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10"
+      className="w-full bg-transparent text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10"
     >
       <div className="max-w-5xl w-full mx-auto">
         {/* Section Header */}
@@ -57,10 +57,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
         {/* Transparent Gradient Glass Framing Container */}
         <div 
           id="about-card-container"
-          className="relative w-full rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.05] via-white/[0.02] to-transparent p-6 sm:p-10 md:p-14 min-h-[480px] sm:min-h-[520px] flex flex-col justify-between overflow-hidden shadow-2xl backdrop-blur-md"
+          className="relative w-full rounded-3xl border border-white/10 p-6 sm:p-10 md:p-14 min-h-[480px] sm:min-h-[520px] flex flex-col justify-between overflow-hidden shadow-2xl"
         >
-          {/* Subtle ambient highlight line */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.05] pointer-events-none" />
 
           {/* Top Main Headline & Read More Button Layout */}
           <div className="max-w-2xl z-10">

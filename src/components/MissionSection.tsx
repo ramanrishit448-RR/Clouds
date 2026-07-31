@@ -9,7 +9,7 @@ export const MissionSection: React.FC<MissionSectionProps> = ({ onExploreClick }
   return (
     <section 
       id="mission-section"
-      className="w-full bg-black text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10"
+      className="w-full bg-transparent text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10"
     >
       <div className="max-w-5xl w-full mx-auto">
         {/* Section Heading */}
@@ -23,10 +23,8 @@ export const MissionSection: React.FC<MissionSectionProps> = ({ onExploreClick }
         {/* Transparent Gradient Glass Framing Container */}
         <div 
           id="mission-card-container"
-          className="relative w-full rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.05] via-white/[0.02] to-transparent p-6 sm:p-10 md:p-14 min-h-[360px] sm:min-h-[420px] flex flex-col justify-between overflow-hidden shadow-2xl backdrop-blur-md"
+          className="relative w-full rounded-3xl border border-white/10 p-6 sm:p-10 md:p-14 min-h-[360px] sm:min-h-[420px] flex flex-col justify-between overflow-hidden shadow-2xl"
         >
-          {/* Subtle atmospheric ambient glow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-white/[0.02] pointer-events-none" />
 
           {/* Top subtle badge identifier */}
           <div className="flex justify-between items-start z-10">

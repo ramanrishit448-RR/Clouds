@@ -6,6 +6,7 @@ import { ServicesSection } from './components/ServicesSection';
 import { AboutSection } from './components/AboutSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { Modals } from './components/Modals';
+import { BackgroundAnimation } from './components/BackgroundAnimation';
 
 export default function App() {
   const [activeModal, setActiveModal] = useState<'login' | 'get-started' | 'demo' | 'funding' | 'nav-info' | null>(null);
@@ -21,8 +22,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black relative">
-      {/* Top Navigation Panel */}
+    <div className="min-h-screen bg-transparent text-white font-sans selection:bg-white selection:text-black relative">
+      <BackgroundAnimation />
+      <div className="relative z-10">
+        {/* Top Navigation Panel */}
       <Navbar 
         onLoginClick={() => setActiveModal('login')} 
         onNavClick={handleNavClick}
@@ -71,6 +74,7 @@ export default function App() {
         onClose={() => setActiveModal(null)} 
         selectedNavInfo={selectedNavInfo}
       />
+      </div>
     </div>
   );
 }
