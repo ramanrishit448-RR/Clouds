@@ -8,28 +8,15 @@ interface NavbarProps {
 
 export const HavenLogo: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
   <svg 
-    viewBox="0 0 32 32" 
+    viewBox="0 0 24 24" 
     fill="none" 
-    xmlns="http://www.w3.org/2000/svg" 
+    stroke="currentColor" 
+    strokeWidth="2.5" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
     className={className}
   >
-    {/* Geometric knot logo matching reference image */}
-    <path 
-      d="M16 4L22.5 10.5L16 17L9.5 10.5L16 4Z" 
-      fill="#FF6B2C" 
-    />
-    <path 
-      d="M28 16L21.5 22.5L15 16L21.5 9.5L28 16Z" 
-      fill="#FF854D" 
-    />
-    <path 
-      d="M16 28L9.5 21.5L16 15L22.5 21.5L16 28Z" 
-      fill="#FF6B2C" 
-    />
-    <path 
-      d="M4 16L10.5 9.5L17 16L10.5 22.5L4 16Z" 
-      fill="#FF854D" 
-    />
+    <path d="M17.5 19c2.5 0 4.5-2 4.5-4.5a4.5 4.5 0 0 0-4-4.47 7 7 0 0 0-13 1.47 4.5 4.5 0 0 0 .5 8.5h12z"/>
   </svg>
 );
 

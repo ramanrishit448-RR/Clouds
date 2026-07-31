@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="cloud-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#a0c4ff"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#cloud-grad)" stroke="#4a90e2" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M17.5 19c2.5 0 4.5-2 4.5-4.5a4.5 4.5 0 0 0-4-4.47 7 7 0 0 0-13 1.47 4.5 4.5 0 0 0 .5 8.5h12z"/>
+</svg>
