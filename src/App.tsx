@@ -25,7 +25,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-white selection:text-black relative">
       <BackgroundAnimation />
-      <SplashCursor RAINBOW_MODE={false} COLOR="#ffffff" />
+      <SplashCursor />
       <div className="relative z-10">
         {/* Top Navigation Panel */}
       <Navbar 

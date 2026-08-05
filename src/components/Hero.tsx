@@ -31,8 +31,8 @@ export const Hero: React.FC<HeroProps> = ({
             text="Every Great Journey Begins Above the Clouds"
             speed={3}
             delay={1}
-            color="#ffffff"
-            shineColor="#a1a1aa"
+            color="#cadfe8ff"
+            shineColor="#2a2727ff"
             spread={150}
             direction="left"
             yoyo={false}
@@ -43,7 +43,8 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Subtext Paragraph */}
         <p 
           id="hero-subtitle"
-          className="text-lg sm:text-xl md:text-2xl text-white font-normal max-w-xl mx-auto leading-relaxed mb-10 sm:mb-12 tracking-normal"
+          className="text-lg sm:text-xl md:text-2xl text-white font-medium italic max-w-xl mx-auto leading-relaxed mb-10 sm:mb-12 tracking-wide"
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           A short introduction that creates curiosity.
         </p>

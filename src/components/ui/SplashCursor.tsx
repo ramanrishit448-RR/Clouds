@@ -897,11 +897,9 @@ function SplashCursor({
       if (!config.RAINBOW_MODE) {
         return hexToRGB(config.COLOR);
       }
-      let c = HSVtoRGB(Math.random(), 1.0, 1.0);
-      c.r *= 0.15;
-      c.g *= 0.15;
-      c.b *= 0.15;
-      return c;
+      const palette = ['#ffffff', '#000000', '#808080', '#ff9933', '#3399ff'];
+      const randomHex = palette[Math.floor(Math.random() * palette.length)];
+      return hexToRGB(randomHex);
     }
 
     function HSVtoRGB(h, s, v) {
