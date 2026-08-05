@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import ShinyText from './ui/ShinyText';
 
 interface HeroProps {
   onGetStartedClick: () => void;
@@ -23,9 +24,19 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Main Headline */}
         <h1 
           id="hero-main-title"
-          className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 sm:mb-8 leading-[1.1] max-w-3xl select-none"
+          className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 sm:mb-8 leading-[1.1] max-w-3xl select-none"
         >
-          Every Great Journey Begins Above the Clouds
+          <ShinyText
+            text="Every Great Journey Begins Above the Clouds"
+            speed={3}
+            delay={1}
+            color="#ffffff"
+            shineColor="#a1a1aa"
+            spread={150}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+          />
         </h1>
 
         {/* Subtext Paragraph */}
