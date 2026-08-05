@@ -21,7 +21,6 @@ export const Hero: React.FC<HeroProps> = ({
 
       <div className="max-w-4xl w-full mx-auto flex flex-col items-center text-center z-10">
         
-        {/* Main Headline */}
         <h1 
           id="hero-main-title"
           className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 sm:mb-8 leading-[1.1] max-w-3xl select-none"
