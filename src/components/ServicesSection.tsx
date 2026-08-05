@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Layout, Code2, Compass, Palette, Plus, ArrowUpRight } from 'lucide-react';
+import { GlowCard } from './ui/spotlight-card';
 
 interface ServicesSectionProps {
   onCardClick?: (serviceName: string) => void;
@@ -77,12 +78,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onCardClick })
             const isHovered = hoveredIndex === index;
 
             return (
-              <div
+              <GlowCard
                 key={service.title}
                 id={`service-card-${service.title.toLowerCase().replace('/', '-')}`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => onCardClick?.(service.title)}
+                customSize={true}
                 className={`group relative rounded-3xl p-6 sm:p-8 min-h-[380px] sm:min-h-[440px] flex flex-col justify-between transition-all duration-300 cursor-pointer overflow-hidden backdrop-blur-md ${
                   isHovered 
                     ? 'border border-white bg-gradient-to-b from-white/[0.12] via-white/[0.06] to-transparent shadow-2xl scale-[1.02]' 
@@ -130,7 +132,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onCardClick })
                     →
                   </span>
                 </div>
-              </div>
+              </GlowCard>
             );
           })}
         </div>

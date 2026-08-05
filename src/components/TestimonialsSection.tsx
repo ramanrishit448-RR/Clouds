@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote, Star, ArrowUpRight } from 'lucide-react';
+import { GlowCard } from './ui/spotlight-card';
 
 interface Testimonial {
   id: string;
@@ -149,13 +150,14 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               const isActive = idx === activeClientIndex;
 
               return (
-                <div
+                <GlowCard
                   key={item.id}
                   id={`testimonial-card-${item.id}`}
                   onClick={() => {
                     setActiveClientIndex(idx);
                     onClientClick?.(item.name);
                   }}
+                  customSize={true}
                   className={`shrink-0 w-[280px] sm:w-[320px] rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-500 cursor-pointer backdrop-blur-md border ${
                     isActive
                       ? 'border-white bg-gradient-to-b from-white/[0.14] via-white/[0.06] to-transparent shadow-2xl scale-[1.03] z-10'
@@ -203,7 +205,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
-                </div>
+                </GlowCard>
               );
             })}
           </div>
