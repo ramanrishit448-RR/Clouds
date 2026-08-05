@@ -25,6 +25,7 @@ export const Hero: React.FC<HeroProps> = ({
         <h1 
           id="hero-main-title"
           className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 sm:mb-8 leading-[1.1] max-w-3xl select-none"
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           <ShinyText
             text="Every Great Journey Begins Above the Clouds"

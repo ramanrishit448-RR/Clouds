@@ -7,6 +7,7 @@ import { AboutSection } from './components/AboutSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { Modals } from './components/Modals';
 import { BackgroundAnimation } from './components/BackgroundAnimation';
+import SplashCursor from './components/ui/SplashCursor';
 
 export default function App() {
   const [activeModal, setActiveModal] = useState<'login' | 'get-started' | 'demo' | 'funding' | 'nav-info' | null>(null);
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-white selection:text-black relative">
       <BackgroundAnimation />
+      <SplashCursor RAINBOW_MODE={false} COLOR="#ffffff" />
       <div className="relative z-10">
         {/* Top Navigation Panel */}
       <Navbar 
