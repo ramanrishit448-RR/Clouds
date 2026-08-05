@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShieldCheck, Eye, Users, RefreshCw, ChevronRight } from 'lucide-react';
+import { ContainerScroll } from './ui/container-scroll-animation';
 
 interface AboutSectionProps {
   onReadMoreClick?: () => void;
@@ -49,16 +50,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
       className="w-full bg-transparent text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center justify-center border-t border-white/10"
     >
       <div className="max-w-5xl w-full mx-auto">
-        {/* Section Header */}
-        <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase block mb-3">
-          04 / ABOUT US
-        </span>
-
-        {/* Transparent Gradient Glass Framing Container */}
-        <div 
-          id="about-card-container"
-          className="relative w-full rounded-3xl border border-white/10 p-6 sm:p-10 md:p-14 min-h-[480px] sm:min-h-[520px] flex flex-col justify-between overflow-hidden shadow-2xl"
+        <ContainerScroll
+          titleComponent={
+            <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase block mb-3">
+              04 / ABOUT US
+            </span>
+          }
         >
+          {/* Transparent Gradient Glass Framing Container */}
+          <div 
+            id="about-card-container"
+            className="relative w-full h-full rounded-3xl border border-white/10 p-6 sm:p-10 md:p-14 flex flex-col justify-between overflow-hidden shadow-2xl bg-transparent"
+          >
 
           {/* Top Main Headline & Read More Button Layout */}
           <div className="max-w-2xl z-10">
@@ -140,7 +143,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </button>
           </div>
         </div>
-      </div>
+      </ContainerScroll>
+    </div>
     </section>
   );
 };
